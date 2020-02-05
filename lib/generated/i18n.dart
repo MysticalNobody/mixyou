@@ -34,6 +34,16 @@ class I18n implements WidgetsLocalizations {
 
   /// "MEXYOU"
   String get title => "MEXYOU";
+  /// "MEXYOU website will help the designer, layout designer, webmaster generate several paragraphs of the more or less meaningful text of the fish in Russian"
+  String get registerText => "MEXYOU website will help the designer, layout designer, webmaster generate several paragraphs of the more or less meaningful text of the fish in Russian";
+  /// "SIGN IN WITH APPLE"
+  String get signApple => "SIGN IN WITH APPLE";
+  /// "GOOGLE"
+  String get signGoogle => "GOOGLE";
+  /// "FACEBOOK"
+  String get signFacebook => "FACEBOOK";
+  /// "Terms of privacy policy"
+  String get privacyPolicy => "Terms of privacy policy";
 }
 
 class _I18n_en_US extends I18n {

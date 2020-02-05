@@ -59,18 +59,7 @@ void startHome() async {
             localizationsDelegates: [i18n, GlobalMaterialLocalizations.delegate, GlobalWidgetsLocalizations.delegate],
             supportedLocales: i18n.supportedLocales,
             localeResolutionCallback: i18n.resolution(fallback: new Locale("en", "EN")),
-            builder: (context, child) {
-              ErrorWidget.builder = (FlutterErrorDetails err) {
-                return Container(
-                  color: Colors.black,
-                  child: Text(
-                    err.stack.toString(),
-                    style: simpleWhiteTextStyle,
-                  ),
-                );
-              };
-              return AuthScreen();
-            },
+            home: AuthScreen(),
           ),
         );
       },
