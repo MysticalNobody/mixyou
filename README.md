@@ -6,8 +6,6 @@ Dating app
 
 `flutter packages get`
 
-`flutter pub run build_runner build --delete-conflicting-outputs`
-
 `flutter run`
 
 ## I18n
@@ -27,14 +25,14 @@ Dating app
 
 ```json
 {
-    "title": "Itis template"
+    "title": "Title"
 }
 ```
 
 `/lib/screen.dart`
 
 ```dart
-I18n.of(context).title // => Itis template
+I18n.of(context).title // => Title
 ```
 
 **String with parameter**
