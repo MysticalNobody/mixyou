@@ -21,7 +21,7 @@ class MYColors {
   ///#C1C0C9
   static const secondaryText = Color(0xffC1C0C9);
 
-  ///#1a1a1a
+  ///#202020
   static const bg = Color(0xff202020);
   
   ///#ffffff

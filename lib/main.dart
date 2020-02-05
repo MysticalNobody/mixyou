@@ -11,6 +11,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:bloc/bloc.dart';
 import 'package:mexyou/generated/i18n.dart';
 import 'package:mexyou/res/res.dart';
+import 'package:mexyou/screens/auth/index.dart';
 
 final isDebugMode = true;
 final navigatorKey = GlobalKey<NavigatorState>();
@@ -43,8 +44,6 @@ void startHome() async {
 
   final i18n = I18n.delegate;
 
-  Widget home = Container();
-
   runApp(
     BlocBuilder(
       bloc: InitBloc(),
@@ -70,7 +69,7 @@ void startHome() async {
                   ),
                 );
               };
-              return home;
+              return AuthScreen();
             },
           ),
         );

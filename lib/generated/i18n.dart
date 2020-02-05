@@ -32,10 +32,8 @@ class I18n implements WidgetsLocalizations {
   @override
   TextDirection get textDirection => TextDirection.ltr;
 
-  /// "Sign in"
-  String get signIn => "Sign in";
-  /// "Sign up"
-  String get signUp => "Sign up";
+  /// "MEXYOU"
+  String get title => "MEXYOU";
 }
 
 class _I18n_en_US extends I18n {
