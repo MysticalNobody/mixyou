@@ -44,8 +44,10 @@ class I18n implements WidgetsLocalizations {
   String get signFacebook => "FACEBOOK";
   /// "Terms of privacy policy"
   String get privacyPolicy => "Terms of privacy policy";
-  /// "Your gender?"
-  String get yourGender => "Your gender?";
+  /// "Your\ngender?"
+  String get yourGender => "Your\ngender?";
+  /// "Please Record a Short video as if you met a girl in real life!"
+  String get recordVideo => "Please Record a Short video as if you met a girl in real life!";
 }
 
 class _I18n_en_US extends I18n {

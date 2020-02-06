@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mexyou/screens/auth/pages/gender/index.dart';
-import 'package:mexyou/screens/auth/pages/register/index.dart';
+import 'package:mexyou/generated/i18n.dart';
 import 'package:provider/provider.dart';
 import 'package:mexyou/res/res.dart';
+
+import 'pages/register/index.dart';
+import 'pages/gender/index.dart';
+import 'pages/video/index.dart';
 
 import 'provider.dart';
 
@@ -19,9 +22,8 @@ class _AuthScreenState extends State<AuthScreen> {
 
   @override
   void initState() {
-    pageController = PageController(initialPage: 0);
+    pageController = PageController(initialPage: 1);
     authProvider = AuthProvider(pageController: pageController);
-    pages = [RegisterPage(authProvider), GenderPage(authProvider), Container(), Container()];
     super.initState();
   }
 
@@ -50,7 +52,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   left: 12,
                   child: Row(
                     children: [
-                      for (int i = 0; i < pages.length; i++)
+                      for (int i = 0; i < AuthScreenPage.values.length; i++)
                         Container(
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
@@ -63,14 +65,29 @@ class _AuthScreenState extends State<AuthScreen> {
                     ],
                   ),
                 ),
+                if (provider.page.index >= 1)
+                  SafeArea(
+                    child: Align(
+                      alignment: Alignment.topCenter,
+                      child: Container(
+                        margin: EdgeInsets.only(top: 24),
+                        child: Text(
+                          I18n.of(context).title,
+                          style: simpleWhiteTextStyle,
+                        ),
+                      ),
+                    ),
+                  ),
                 SafeArea(
                   child: PageView(
                     controller: pageController,
                     physics: NeverScrollableScrollPhysics(),
-                    onPageChanged: (page) {
-                      provider.setPage(AuthScreenPage.values[page]);
-                    },
-                    children: pages,
+                    children: [
+                      RegisterPage(authProvider),
+                      GenderPage(authProvider),
+                      VideoPage(authProvider),
+                      GenderPage(authProvider)
+                    ],
                   ),
                 ),
               ],

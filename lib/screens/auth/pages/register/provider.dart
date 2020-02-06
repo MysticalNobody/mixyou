@@ -4,7 +4,7 @@ import 'package:mexyou/screens/auth/provider.dart';
 enum RegisterType { Apple, Google, Facebook }
 
 class RegisterProvider with ChangeNotifier {
-  RegisterProvider({this.authProvider});
+  RegisterProvider(this.authProvider);
 
   AuthProvider authProvider;
 

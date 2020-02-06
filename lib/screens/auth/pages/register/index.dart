@@ -22,7 +22,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   @override
   void initState() {
-    registerProvider = RegisterProvider(authProvider: widget.authProvider);
+    registerProvider = RegisterProvider(widget.authProvider);
     super.initState();
   }
 
@@ -72,6 +72,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   children: <Widget>[
                     Expanded(
                       child: MYButton(
+                        onTap: () => registerProvider.signIn(RegisterType.Google),
                         text: I18n.of(context).signGoogle,
                       ),
                     ),
@@ -80,6 +81,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                     Expanded(
                       child: MYButton(
+                        onTap: () => registerProvider.signIn(RegisterType.Facebook),
                         text: I18n.of(context).signFacebook,
                       ),
                     ),
