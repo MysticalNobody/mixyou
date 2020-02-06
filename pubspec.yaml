@@ -41,7 +41,12 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    # Images
     - assets/images/bg.png
+    - assets/images/selfies.png
+    # Icons
+    - assets/icons/cam.svg
+    - assets/icons/video.svg
   fonts:
     - family: Gilroy
       fonts:

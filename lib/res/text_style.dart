@@ -62,9 +62,8 @@ const TextStyle captionWhiteTextStyle = const TextStyle(
 );
 
 const TextStyle buttonTextStyle = const TextStyle(
-  fontSize: 18,
+  fontSize: 15,
   fontFamily: mainFontFamily,
-  fontWeight: FontWeight.w100,
   color: MYColors.buttonText,
 );
 

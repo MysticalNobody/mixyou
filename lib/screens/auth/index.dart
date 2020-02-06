@@ -22,7 +22,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
   @override
   void initState() {
-    pageController = PageController(initialPage: 1);
+    pageController = PageController(initialPage: 0);
     authProvider = AuthProvider(pageController: pageController);
     super.initState();
   }
@@ -79,16 +79,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     ),
                   ),
                 SafeArea(
-                  child: PageView(
-                    controller: pageController,
-                    physics: NeverScrollableScrollPhysics(),
-                    children: [
-                      RegisterPage(authProvider),
-                      GenderPage(authProvider),
-                      VideoPage(authProvider),
-                      GenderPage(authProvider)
-                    ],
-                  ),
+                  child: provider.getPageWidget()
                 ),
               ],
             );

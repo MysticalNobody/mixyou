@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mexyou/res/res.dart';
 
+import '../res/res.dart';
+
 class MYButton extends StatelessWidget {
   const MYButton({Key key, @required this.text, this.width, this.onTap}) : super(key: key);
 
@@ -17,7 +19,10 @@ class MYButton extends StatelessWidget {
         width: width,
         color: MYColors.whiteBg,
         child: Center(
-          child: Text(text),
+          child: Text(
+            text,
+            style: buttonTextStyle,
+          ),
         ),
       ),
     );

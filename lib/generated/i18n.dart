@@ -48,6 +48,16 @@ class I18n implements WidgetsLocalizations {
   String get yourGender => "Your\ngender?";
   /// "Please Record a Short video as if you met a girl in real life!"
   String get recordVideo => "Please Record a Short video as if you met a girl in real life!";
+  /// "Add Your Video"
+  String get addVideo => "Add Your Video";
+  /// "Recording should not be longer than 60 sec. The videos that exceed the limit will be automatically cut."
+  String get videoLimit => "Recording should not be longer than 60 sec. The videos that exceed the limit will be automatically cut.";
+  /// "Camera"
+  String get camera => "Camera";
+  /// "Video Library"
+  String get videoLibrary => "Video Library";
+  /// "PROCEED WITHOUT RECORDING"
+  String get withoutRecording => "PROCEED WITHOUT RECORDING";
 }
 
 class _I18n_en_US extends I18n {

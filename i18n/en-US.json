@@ -6,5 +6,10 @@
   "signFacebook": "FACEBOOK",
   "privacyPolicy": "Terms of privacy policy",
   "yourGender": "Your\ngender?",
-  "recordVideo": "Please Record a Short video as if you met a girl in real life!"
+  "recordVideo": "Please Record a Short video as if you met a girl in real life!",
+  "addVideo": "Add Your Video",
+  "videoLimit":"Recording should not be longer than 60 sec. The videos that exceed the limit will be automatically cut.",
+  "camera":"Camera",
+  "videoLibrary":"Video Library",
+  "withoutRecording":"PROCEED WITHOUT RECORDING"
 }
