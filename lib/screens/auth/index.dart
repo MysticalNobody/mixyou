@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mexyou/screens/auth/pages/gender/index.dart';
 import 'package:mexyou/screens/auth/pages/register/index.dart';
 import 'package:provider/provider.dart';
+import 'package:mexyou/res/res.dart';
 
 import 'provider.dart';
 
@@ -13,11 +15,13 @@ class _AuthScreenState extends State<AuthScreen> {
   AuthProvider authProvider;
 
   PageController pageController;
+  List<Widget> pages;
 
   @override
   void initState() {
     pageController = PageController(initialPage: 0);
     authProvider = AuthProvider(pageController: pageController);
+    pages = [RegisterPage(authProvider), GenderPage(authProvider), Container(), Container()];
     super.initState();
   }
 
@@ -41,13 +45,33 @@ class _AuthScreenState extends State<AuthScreen> {
                     opacity: provider.page.index < 2 ? 1 : 0,
                   ),
                 ),
-                PageView(
-                  controller: pageController,
-                  physics: NeverScrollableScrollPhysics(),
-                  onPageChanged: (page) {
-                    provider.setPage(AuthScreenPage.values[page]);
-                  },
-                  children: [RegisterPage(authProvider), Container(), Container(), Container()],
+                Positioned(
+                  bottom: 12,
+                  left: 12,
+                  child: Row(
+                    children: [
+                      for (int i = 0; i < pages.length; i++)
+                        Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: provider.page.index == i ? MYColors.whiteText : MYColors.greyText,
+                          ),
+                          width: 8,
+                          height: 8,
+                          margin: EdgeInsets.only(right: 18),
+                        ),
+                    ],
+                  ),
+                ),
+                SafeArea(
+                  child: PageView(
+                    controller: pageController,
+                    physics: NeverScrollableScrollPhysics(),
+                    onPageChanged: (page) {
+                      provider.setPage(AuthScreenPage.values[page]);
+                    },
+                    children: pages,
+                  ),
                 ),
               ],
             );

@@ -6,9 +6,9 @@ import 'package:mexyou/screens/auth/provider.dart';
 import 'package:mexyou/widgets/button.dart';
 
 class RegisterPage extends StatefulWidget {
-  RegisterPage(this.authProvider);
+  RegisterPage(this.authProvider, {Key key});
 
-  AuthProvider authProvider;
+  final AuthProvider authProvider;
 
   @override
   _RegisterPageState createState() => _RegisterPageState();
@@ -31,25 +31,31 @@ class _RegisterPageState extends State<RegisterPage> {
     return Container(
       padding: EdgeInsets.only(bottom: 48),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           Column(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(top: height * .2),
                 child: Text(
                   I18n.of(context).title,
                   style: displayTextStyle,
                 ),
               ),
+              SizedBox(
+                height: height * .1,
+              ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 72, horizontal: 32),
+                margin: EdgeInsets.symmetric(horizontal: 32),
                 child: Text(
                   I18n.of(context).registerText,
                   style: captionWhiteTextStyle,
                 ),
               ),
             ],
+          ),
+          SizedBox(
+            height: height * .1,
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 32),
