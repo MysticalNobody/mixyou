@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'pages/gender/index.dart';
+import 'pages/info/index.dart';
 import 'pages/register/index.dart';
 import 'pages/video/index.dart';
 
@@ -32,7 +33,7 @@ class AuthProvider with ChangeNotifier {
         return VideoPage(this);
         break;
       case AuthScreenPage.InfoPage:
-        return Container();
+        return InfoPage(this);
         break;
     }
     return RegisterPage(this);

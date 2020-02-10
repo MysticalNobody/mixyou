@@ -5,15 +5,8 @@ import 'package:mexyou/res/res.dart';
 import 'package:mexyou/screens/auth/provider.dart';
 
 import '../../../../generated/i18n.dart';
-import '../../../../generated/i18n.dart';
-import '../../../../generated/i18n.dart';
-import '../../../../res/res.dart';
-import '../../../../res/res.dart';
-import '../../../../res/res.dart';
-import '../../../../res/res.dart';
-import '../../../../res/res.dart';
-import '../../../../res/res.dart';
-import '../../../../res/res.dart';
+import 'provider.dart';
+import 'provider.dart';
 
 class VideoPage extends StatefulWidget {
   const VideoPage(this.authProvider, {Key key}) : super(key: key);
@@ -26,6 +19,12 @@ class VideoPage extends StatefulWidget {
 class _VideoPageState extends State<VideoPage> {
   double get width => MediaQuery.of(context).size.width;
   double get height => MediaQuery.of(context).size.height;
+  VideoPageProvider videoPageProvider;
+  @override
+  void initState() {
+    videoPageProvider = VideoPageProvider(widget.authProvider);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,6 +87,7 @@ class _VideoPageState extends State<VideoPage> {
                       ),
                     ),
                     ListTile(
+                      onTap: () => videoPageProvider.selectVideo(),
                       title: Text(
                         I18n.of(context).camera,
                         style: TextStyle(
@@ -102,6 +102,7 @@ class _VideoPageState extends State<VideoPage> {
                       ),
                     ),
                     ListTile(
+                      onTap: () => videoPageProvider.selectVideo(),
                       title: Text(
                         I18n.of(context).videoLibrary,
                         style: TextStyle(
@@ -119,16 +120,19 @@ class _VideoPageState extends State<VideoPage> {
                       height: 12,
                     ),
                     Expanded(
-                      child: Container(
-                        height: 41,
-                        margin: EdgeInsets.symmetric(horizontal: 16),
-                        decoration: BoxDecoration(
-                            border: Border.all(color: MYColors.buttonText, width: 1),
-                            borderRadius: BorderRadius.circular(5)),
-                        child: Center(
-                          child: Text(
-                            I18n.of(context).withoutRecording,
-                            style: buttonTextStyle,
+                      child: GestureDetector(
+                        onTap: () => videoPageProvider.selectVideo(),
+                        child: Container(
+                          height: 41,
+                          margin: EdgeInsets.symmetric(horizontal: 16),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: MYColors.buttonText, width: 1),
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Center(
+                            child: Text(
+                              I18n.of(context).withoutRecording,
+                              style: buttonTextStyle,
+                            ),
                           ),
                         ),
                       ),

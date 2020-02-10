@@ -6,7 +6,7 @@ class VideoPageProvider with ChangeNotifier {
 
   AuthProvider authProvider;
 
-  void selectGender() {
-    authProvider.setPage(AuthScreenPage.VideoPage);
+  void selectVideo() {
+    authProvider.setPage(AuthScreenPage.InfoPage);
   }
 }

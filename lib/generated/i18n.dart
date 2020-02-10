@@ -58,6 +58,10 @@ class I18n implements WidgetsLocalizations {
   String get videoLibrary => "Video Library";
   /// "PROCEED WITHOUT RECORDING"
   String get withoutRecording => "PROCEED WITHOUT RECORDING";
+  /// "Tell us a little\nbit about you"
+  String get tellUs => "Tell us a little\nbit about you";
+  /// "Who are you looking for?"
+  String get lookingFor => "Who are you looking for?";
 }
 
 class _I18n_en_US extends I18n {
