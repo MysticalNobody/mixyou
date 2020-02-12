@@ -15,6 +15,12 @@ class AuthProvider with ChangeNotifier {
 
   AuthScreenPage page;
   PageController pageController;
+  bool isFinish = false;
+
+  setFinish(finish) {
+    isFinish = finish;
+    notifyListeners();
+  }
 
   setPage(AuthScreenPage _page) {
     page = _page;

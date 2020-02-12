@@ -37,17 +37,17 @@ dev_dependencies:
   json_serializable:
   build_runner:
 
-
 flutter:
   uses-material-design: true
   assets:
     # Images
     - assets/images/bg.png
     - assets/images/selfies.png
-    # Icons
-    - assets/icons/cam.svg
-    - assets/icons/video.svg
+    - assets/images/share_location.png
   fonts:
+    - family:  MYIcons
+      fonts:
+       - asset: assets/fonts/MYIcons/MYIcons.ttf
     - family: Gilroy
       fonts:
         - asset: assets/fonts/Gilroy/Gilroy-Regular.ttf

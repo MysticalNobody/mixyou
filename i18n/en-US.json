@@ -13,5 +13,11 @@
   "videoLibrary": "Video Library",
   "withoutRecording": "PROCEED WITHOUT RECORDING",
   "tellUs": "Tell us a little\nbit about you",
-  "lookingFor": "Who are you looking for?"
+  "lookingFor": "Who are you looking for?",
+  "name": "Name",
+  "age": "Age",
+  "finishRegistration": "Finish registration",
+  "searchForGirls": "Search for girls nearby",
+  "allowAccessToGeo": "Allow the app access to the geolocation and we will find your future girlfriend nearby",
+  "shareLocation": "Share Location"
 }

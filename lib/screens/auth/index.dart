@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mexyou/generated/i18n.dart';
+import 'package:mexyou/screens/location/index.dart';
+import 'package:mexyou/screens/main/index.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:mexyou/res/res.dart';
 
@@ -47,22 +50,40 @@ class _AuthScreenState extends State<AuthScreen> {
                     opacity: provider.page.index < 2 ? 1 : 0,
                   ),
                 ),
-                Positioned(
-                  bottom: 12,
-                  left: 12,
-                  child: Row(
-                    children: [
-                      for (int i = 0; i < AuthScreenPage.values.length; i++)
-                        Container(
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: provider.page.index == i ? MYColors.whiteText : MYColors.greyText,
-                          ),
-                          width: 8,
-                          height: 8,
-                          margin: EdgeInsets.only(right: 18),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: <Widget>[
+                            for (int i = 0; i < AuthScreenPage.values.length; i++)
+                              Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: provider.page.index == i ? MYColors.whiteText : MYColors.greyText,
+                                ),
+                                width: 8,
+                                height: 8,
+                                margin: EdgeInsets.only(right: 18),
+                              ),
+                          ],
                         ),
-                    ],
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacement(
+                                context, PageTransition(child: ShareLocationScreen(), type: PageTransitionType.fade));
+                          },
+                          child: Text(
+                            I18n.of(context).finishRegistration.toUpperCase(),
+                            style: TextStyle(
+                                fontSize: 12.25, color: provider.isFinish ? MYColors.whiteText : MYColors.greyText),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 if (provider.page.index >= 1)
@@ -78,9 +99,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       ),
                     ),
                   ),
-                SafeArea(
-                  child: provider.getPageWidget()
-                ),
+                SafeArea(child: provider.getPageWidget()),
               ],
             );
           },

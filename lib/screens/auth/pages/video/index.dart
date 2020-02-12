@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mexyou/generated/i18n.dart';
+import 'package:mexyou/res/icons_font.dart';
 import 'package:mexyou/res/res.dart';
 import 'package:mexyou/screens/auth/provider.dart';
 
@@ -19,7 +20,9 @@ class VideoPage extends StatefulWidget {
 class _VideoPageState extends State<VideoPage> {
   double get width => MediaQuery.of(context).size.width;
   double get height => MediaQuery.of(context).size.height;
+
   VideoPageProvider videoPageProvider;
+
   @override
   void initState() {
     videoPageProvider = VideoPageProvider(widget.authProvider);
@@ -87,20 +90,20 @@ class _VideoPageState extends State<VideoPage> {
                       ),
                     ),
                     ListTile(
-                      onTap: () => videoPageProvider.selectVideo(),
-                      title: Text(
-                        I18n.of(context).camera,
-                        style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: MYColors.greyText,
-                            fontFamily: mainFontFamily),
-                      ),
-                      trailing: SvgPicture.asset(
-                        'assets/icons/cam.svg',
-                        height: 24,
-                      ),
-                    ),
+                        onTap: () => videoPageProvider.selectVideo(),
+                        title: Text(
+                          I18n.of(context).camera,
+                          style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: MYColors.greyText,
+                              fontFamily: mainFontFamily),
+                        ),
+                        trailing: Icon(
+                          MYIcons.cam,
+                          size: 24,
+                          color: MYColors.text,
+                        )),
                     ListTile(
                       onTap: () => videoPageProvider.selectVideo(),
                       title: Text(
@@ -111,9 +114,10 @@ class _VideoPageState extends State<VideoPage> {
                             color: MYColors.greyText,
                             fontFamily: mainFontFamily),
                       ),
-                      trailing: SvgPicture.asset(
-                        'assets/icons/video.svg',
-                        height: 24,
+                      trailing: Icon(
+                        MYIcons.video,
+                        size: 24,
+                        color: MYColors.text,
                       ),
                     ),
                     SizedBox(

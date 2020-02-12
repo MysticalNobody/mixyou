@@ -62,6 +62,18 @@ class I18n implements WidgetsLocalizations {
   String get tellUs => "Tell us a little\nbit about you";
   /// "Who are you looking for?"
   String get lookingFor => "Who are you looking for?";
+  /// "Name"
+  String get name => "Name";
+  /// "Age"
+  String get age => "Age";
+  /// "Finish registration"
+  String get finishRegistration => "Finish registration";
+  /// "Search for girls nearby"
+  String get searchForGirls => "Search for girls nearby";
+  /// "Allow the app access to the geolocation and we will find your future girlfriend nearby"
+  String get allowAccessToGeo => "Allow the app access to the geolocation and we will find your future girlfriend nearby";
+  /// "Share Location"
+  String get shareLocation => "Share Location";
 }
 
 class _I18n_en_US extends I18n {
