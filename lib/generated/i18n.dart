@@ -74,6 +74,10 @@ class I18n implements WidgetsLocalizations {
   String get allowAccessToGeo => "Allow the app access to the geolocation and we will find your future girlfriend nearby";
   /// "Share Location"
   String get shareLocation => "Share Location";
+  /// "No name"
+  String get noName => "No name";
+  /// "No address"
+  String get noAdress => "No address";
 }
 
 class _I18n_en_US extends I18n {

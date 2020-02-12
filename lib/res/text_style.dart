@@ -53,6 +53,17 @@ const TextStyle simpleWhiteTextStyle = const TextStyle(
   fontWeight: FontWeight.w100,
   color: MYColors.whiteText,
 );
+const TextStyle cardNameTextStyle = const TextStyle(
+  fontSize: 24.25,
+  fontFamily: mainFontFamily,
+  fontWeight: FontWeight.bold,
+  color: MYColors.greyText,
+);
+const TextStyle cardAddressTextStyle = const TextStyle(
+  fontSize: 15,
+  fontFamily: mainFontFamily,
+  color: MYColors.secondaryText,
+);
 
 const TextStyle captionWhiteTextStyle = const TextStyle(
   fontSize: 18,

@@ -26,7 +26,11 @@ dependencies:
   functional_widget: ^0.7.1
   cupertino_back_gesture: ^0.0.1
   cupertino_icons: ^0.1.2
+  shimmer: ^1.0.0
   flutter_spinkit: ^4.0.0
+  swipe_stack: ^1.0.0
+  built_value:
+  built_collection:
 
 dev_dependencies:
   flutter_test:
@@ -34,8 +38,8 @@ dev_dependencies:
   build:
   build_config:
   built_value_generator:
-  json_serializable:
-  build_runner:
+  json_serializable: ^3.0.0
+  build_runner: ^1.5.0
 
 flutter:
   uses-material-design: true
@@ -45,9 +49,9 @@ flutter:
     - assets/images/selfies.png
     - assets/images/share_location.png
   fonts:
-    - family:  MYIcons
+    - family: MYIcons
       fonts:
-       - asset: assets/fonts/MYIcons/MYIcons.ttf
+        - asset: assets/fonts/MYIcons/MYIcons.ttf
     - family: Gilroy
       fonts:
         - asset: assets/fonts/Gilroy/Gilroy-Regular.ttf

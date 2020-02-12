@@ -19,5 +19,7 @@
   "finishRegistration": "Finish registration",
   "searchForGirls": "Search for girls nearby",
   "allowAccessToGeo": "Allow the app access to the geolocation and we will find your future girlfriend nearby",
-  "shareLocation": "Share Location"
+  "shareLocation": "Share Location",
+  "noName": "No name",
+  "noAdress": "No address"
 }
