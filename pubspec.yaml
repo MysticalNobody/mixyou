@@ -28,7 +28,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   shimmer: ^1.0.0
   flutter_spinkit: ^4.0.0
-  swipe_stack: ^1.0.0
+  flutter_tindercard:
   built_value:
   built_collection:
 

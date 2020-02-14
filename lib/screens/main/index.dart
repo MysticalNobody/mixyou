@@ -30,7 +30,8 @@ class _MainScreenState extends State<MainScreen> {
             bottomNavigationBar: BottomNavigationBar(
                 type: BottomNavigationBarType.fixed,
                 backgroundColor: MYColors.whiteBg,
-                currentIndex: 0,
+                currentIndex: provider.page.index,
+                onTap: (page) => provider.setPage(MainScreenPage.values[page]),
                 items: <BottomNavigationBarItem>[
                   buildItem(MYIcons.discover),
                   buildItem(MYIcons.nearby),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mexyou/screens/main/pages/nearby/index.dart';
 
 import 'pages/discover/index.dart';
 
@@ -22,7 +23,7 @@ class MainScreenProvider with ChangeNotifier {
         return DiscoverPage();
         break;
       case MainScreenPage.NearbyPage:
-        return Container();
+        return NearbyScreen();
         break;
       case MainScreenPage.FavoritesPage:
         return Container();
